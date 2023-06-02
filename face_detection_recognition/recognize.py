@@ -44,7 +44,7 @@ def recognize():
             id, confidence = recognizer.predict(cropped_face)
             print("confidence: " + str(confidence) + ", predicted id: " + str(id))
             print("labels: " + str(reversed_label_dict))
-            if confidence <= 45:
+            if confidence < 46:
                 label = reversed_label_dict[id]
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 cv2.putText(
