@@ -11,3 +11,4 @@ Haar-like features:
 
 LBP:
 - https://towardsdatascience.com/the-power-of-local-binary-patterns-3134178af1c7
+- https://medium.com/swlh/local-binary-pattern-algorithm-the-math-behind-it-%EF%B8%8F-edf7b0e1c8b3
