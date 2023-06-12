@@ -1,3 +1,4 @@
 /subjects/*
 /face_recognizer.yaml
 /labels.pkl
+/.idea
