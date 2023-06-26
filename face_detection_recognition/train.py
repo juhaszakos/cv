@@ -75,7 +75,7 @@ def add_new_subject():
         frame_monochrome = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         frame_monochrome_normalized = cv2.equalizeHist(frame_monochrome)
         faces = classifier.detectMultiScale(
-             frame_monochrome_normalized ,
+             frame_monochrome_normalized,
             # scaleFactor=1.05,
              minNeighbors=5
             # minSize=(100, 100)
@@ -83,7 +83,7 @@ def add_new_subject():
 
         if (len(faces) > 0):
             x, y, w, h = faces[0]  # only one face is expected during new subject auditing
-            cropped_face = frame[y:y + h, x: x + w]
+            cropped_face = frame_monochrome_normalized[y:y + h, x: x + w]
             cropped_face = cv2.resize(cropped_face, (250, 250))
             image_name = name_of_subject + str(counter) + ".jpg"
             image_path = os.path.join(path, image_name)

@@ -38,7 +38,7 @@ def recognize():
             # minSize=(100, 100)
         )
         for (x, y, w, h) in faces:
-            cropped_face = frame_monochrome[y:y + h, x:x + w]
+            cropped_face = frame_monochrome_normalized[y:y + h, x:x + w]
             cropped_face = cv2.resize(cropped_face, (250, 250))
             cv2.imshow('found face', cropped_face)
             id, confidence = recognizer.predict(cropped_face)
